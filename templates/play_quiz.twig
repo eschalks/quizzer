@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+<script type="text/javascript">
+    window.quiz_json = {{ json | raw }};
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ quiz.name }}</h1>
+        </div>
+    </div>
+
+    <form method="post" action="{{ urlFor('results') }}">
+        {% for question in quiz.questions %}
+            <div class="row question">
+                <div class="col-md-12">
+                    <h4>{{ question.question }}</h4>
+                    {% if question.type == 'open' %}
+                        <input name="answer{{loop.index0}}">
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </form>
+
+
+</div>
+
+{% endblock %}

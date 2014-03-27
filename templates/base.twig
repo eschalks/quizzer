@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ siteUrl('css/bootstrap.min.css') }}" >
+    <link rel="stylesheet" href="{{ siteUrl('css/bootstrap-theme.min.css') }}" >
+    <link rel="stylesheet" href="{{ siteUrl('css/quizzer.css') }}" >
+    <script type="text/javascript" src="{{ siteUrl('js/jquery-1.11.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ siteUrl('js/bootstrap.min.js') }}"></script>
+    <title>Quizzer</title>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#qz-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ urlFor('index') }}">Quizzer</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="qz-navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ urlFor('create_quiz') }}">Create Quiz</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

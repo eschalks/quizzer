@@ -1,0 +1,9 @@
+#question_editor {
+    border: thin solid black;
+}
+
+.question {
+    border: thin solid black;
+    padding: 1em;
+    margin-bottom: 1em;
+}
